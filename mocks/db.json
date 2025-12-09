@@ -1,0 +1,300 @@
+{
+  "blogPosts": [
+    {
+      "id": "1",
+      "title": "The Great Coffee Heist of 2024",
+      "content": "It all started on a Monday morning when someone noticed the premium coffee beans had mysteriously relocated to the executive lounge. Our mission: retrieve them before the afternoon slump hits. Operation Java Freedom was a success, with minimal casualties (one spilled latte).",
+      "author": "Alice Chen",
+      "upvotes": 42
+    },
+    {
+      "id": "2",
+      "title": "Mission Impossible: The Stapler Redistribution",
+      "content": "Dave from accounting hoarded 15 staplers in his desk drawer. We organized a covert operation to redistribute them across the office. The mission was completed in under 10 minutes, and Dave still hasn't noticed. Code name: Operation Red Swingline.",
+      "author": "Marcus Johnson",
+      "upvotes": 38
+    },
+    {
+      "id": "3",
+      "title": "How We Turned the Conference Room Into a Blanket Fort",
+      "content": "Last Friday at 4 PM, we executed our most ambitious heist yet. Using 20 blankets, 15 chairs, and pure determination, we transformed Conference Room B into an epic blanket fort. The meeting scheduled for 5 PM was... interesting.",
+      "author": "Sarah Park",
+      "upvotes": 67
+    },
+    {
+      "id": "4",
+      "title": "The Mystery of the Missing Lunch Labels",
+      "content": "Someone's been peeling off lunch labels in the break room fridge. We set up a sting operation with a decoy sandwich labeled 'Property of Tony.' The culprit? The office cat. Mission status: Partially successful.",
+      "author": "Tony Ramirez",
+      "upvotes": 29
+    },
+    {
+      "id": "5",
+      "title": "Operation Desk Swap: A Tale of Confusion",
+      "content": "While Karen was on vacation, we swapped her entire desk setup with Mike's. Everything. Down to the family photos in different frames. She came back today. The confusion was glorious. Mike is still finding her sticky notes.",
+      "author": "Mike Peters",
+      "upvotes": 51
+    },
+    {
+      "id": "6",
+      "title": "The Post-It Note Takeover",
+      "content": "Using exactly 2,847 post-it notes, we covered every visible surface of Brad's cubicle. His monitor, keyboard, phone, even his coffee mug. It took him 2 hours to find his mouse. Worth every minute of planning.",
+      "author": "Jennifer Wu",
+      "upvotes": 73
+    },
+    {
+      "id": "7",
+      "title": "Heist Fail: The Printer Rebellion",
+      "content": "We tried to relocate the noisy printer to the storage closet. The printer had other plans. It jammed, beeped loudly, and printed 47 blank pages. We aborted the mission. The printer won this round.",
+      "author": "Alex Kim",
+      "upvotes": 22
+    },
+    {
+      "id": "8",
+      "title": "Mission: Replace All Desktop Backgrounds with Cats",
+      "content": "During the holiday party, we changed every unlocked computer's desktop background to different cat photos. 23 computers, 23 cats. The IT department was not amused. We were very amused.",
+      "author": "Rachel Martinez",
+      "upvotes": 55
+    },
+    {
+      "id": "9",
+      "title": "The Great Snack Drawer Investigation",
+      "content": "Someone raided the communal snack drawer three times this week. We set up a surveillance operation using the security camera footage. Plot twist: it was the CEO. Mission accomplished but we can't report it.",
+      "author": "David Lin",
+      "upvotes": 84
+    },
+    {
+      "id": "10",
+      "title": "How We Convinced Everyone It Was Hawaiian Shirt Day",
+      "content": "By strategically wearing Hawaiian shirts and casually mentioning it to different people, we convinced 15 employees that today was Hawaiian Shirt Day. It wasn't. The looks on their faces during the 9 AM meeting were priceless.",
+      "author": "Emily Santos",
+      "upvotes": 61
+    },
+    {
+      "id": "11",
+      "title": "Operation Rubber Duck: A Debugging Story",
+      "content": "We placed 50 rubber ducks throughout the dev team's area overnight. Each duck had a different programming joke attached. By noon, they were all on desks being used for actual rubber duck debugging. Success?",
+      "author": "Chris Taylor",
+      "upvotes": 45
+    },
+    {
+      "id": "12",
+      "title": "The Mysterious Case of the Rearranged Keyboard",
+      "content": "Someone's been swapping random keys on the mechanical keyboards in the dev pit. We've narrowed it down to three suspects. The investigation continues. QWERTY is no longer safe.",
+      "author": "Stephanie Brown",
+      "upvotes": 33
+    }
+  ],
+  "heists": [
+    {
+      "id": 1,
+      "slug": "coffee-machine-relocation",
+      "title": "Coffee Machine Relocation",
+      "description": "Move the fancy espresso machine from the executive floor to the common break room. Operation must be completed during lunch hour when executives are away.",
+      "status": "active",
+      "difficulty": "medium",
+      "points": 150,
+      "createdBy": "Alice Chen",
+      "assignedTo": null,
+      "participants": [],
+      "createdAt": "2025-12-08T09:00:00Z",
+      "expiresAt": "2025-12-10T17:00:00Z"
+    },
+    {
+      "id": 2,
+      "slug": "birthday-surprise-setup",
+      "title": "Birthday Surprise Setup",
+      "description": "Decorate Sarah's desk with balloons and streamers before she arrives at 9 AM. Must be done covertly between 7-8:30 AM.",
+      "status": "assigned",
+      "difficulty": "easy",
+      "points": 50,
+      "createdBy": "Marcus Johnson",
+      "assignedTo": "Jennifer Wu",
+      "participants": ["Jennifer Wu", "Mike Peters"],
+      "createdAt": "2025-12-07T15:30:00Z",
+      "expiresAt": "2025-12-09T09:00:00Z"
+    },
+    {
+      "id": 3,
+      "slug": "whiteboard-marker-mystery",
+      "title": "The Whiteboard Marker Mystery",
+      "description": "Someone keeps taking all the good whiteboard markers. Set up a sting operation to catch the culprit.",
+      "status": "active",
+      "difficulty": "hard",
+      "points": 200,
+      "createdBy": "David Lin",
+      "assignedTo": null,
+      "participants": [],
+      "createdAt": "2025-12-06T10:15:00Z",
+      "expiresAt": "2025-12-12T17:00:00Z"
+    },
+    {
+      "id": 4,
+      "slug": "plant-rescue-mission",
+      "title": "Plant Rescue Mission",
+      "description": "The office plants on the 3rd floor are dying. Water them all and leave mysterious 'From your secret plant guardian' notes.",
+      "status": "expired",
+      "difficulty": "easy",
+      "points": 75,
+      "createdBy": "Sarah Park",
+      "assignedTo": "Tony Ramirez",
+      "participants": ["Tony Ramirez"],
+      "createdAt": "2025-11-28T08:00:00Z",
+      "expiresAt": "2025-12-05T17:00:00Z"
+    },
+    {
+      "id": 5,
+      "slug": "cable-organization-crusade",
+      "title": "Cable Organization Crusade",
+      "description": "The cable situation under Jim's desk is a disaster. Organize it while he's in his 2-hour meeting. Bonus points for color-coding.",
+      "status": "assigned",
+      "difficulty": "medium",
+      "points": 100,
+      "createdBy": "Chris Taylor",
+      "assignedTo": "Alex Kim",
+      "participants": ["Alex Kim", "Rachel Martinez"],
+      "createdAt": "2025-12-08T11:00:00Z",
+      "expiresAt": "2025-12-09T16:00:00Z"
+    },
+    {
+      "id": 6,
+      "slug": "motivational-quote-takeover",
+      "title": "Motivational Quote Takeover",
+      "description": "Replace all the corporate motivational posters with funny ones. Make them look official enough that it takes a while to notice.",
+      "status": "active",
+      "difficulty": "hard",
+      "points": 250,
+      "createdBy": "Emily Santos",
+      "assignedTo": null,
+      "participants": [],
+      "createdAt": "2025-12-07T14:20:00Z",
+      "expiresAt": "2025-12-11T17:00:00Z"
+    },
+    {
+      "id": 7,
+      "slug": "meeting-room-name-rebellion",
+      "title": "Meeting Room Name Rebellion",
+      "description": "The boring meeting room names (Conference A, B, C) need to go. Create and install new nameplates with creative names like 'The Thunder Dome' and 'Decision Central'.",
+      "status": "expired",
+      "difficulty": "medium",
+      "points": 175,
+      "createdBy": "Marcus Johnson",
+      "assignedTo": "Mike Peters",
+      "participants": ["Mike Peters", "Stephanie Brown"],
+      "createdAt": "2025-11-25T09:00:00Z",
+      "expiresAt": "2025-12-02T17:00:00Z"
+    },
+    {
+      "id": 8,
+      "slug": "snack-drawer-restocking",
+      "title": "Snack Drawer Restocking",
+      "description": "The snack drawer is always empty by Tuesday. Secretly restock it with premium snacks and see how long it takes people to notice the upgrade.",
+      "status": "active",
+      "difficulty": "easy",
+      "points": 60,
+      "createdBy": "Jennifer Wu",
+      "assignedTo": null,
+      "participants": [],
+      "createdAt": "2025-12-08T13:45:00Z",
+      "expiresAt": "2025-12-10T12:00:00Z"
+    },
+    {
+      "id": 9,
+      "slug": "desk-plant-swap",
+      "title": "The Great Desk Plant Swap",
+      "description": "Swap everyone's desk plants with each other. Try to match plant personalities with their new owners for maximum confusion.",
+      "status": "assigned",
+      "difficulty": "medium",
+      "points": 120,
+      "createdBy": "Rachel Martinez",
+      "assignedTo": "Sarah Park",
+      "participants": ["Sarah Park", "Emily Santos"],
+      "createdAt": "2025-12-07T16:00:00Z",
+      "expiresAt": "2025-12-09T18:00:00Z"
+    },
+    {
+      "id": 10,
+      "slug": "mystery-compliment-campaign",
+      "title": "Mystery Compliment Campaign",
+      "description": "Leave anonymous, specific, genuine compliments on people's desks. Must be personalized and thoughtful, not generic.",
+      "status": "active",
+      "difficulty": "easy",
+      "points": 80,
+      "createdBy": "Alice Chen",
+      "assignedTo": null,
+      "participants": [],
+      "createdAt": "2025-12-06T08:30:00Z",
+      "expiresAt": "2025-12-13T17:00:00Z"
+    },
+    {
+      "id": 11,
+      "slug": "printer-error-messages",
+      "title": "Custom Printer Error Messages",
+      "description": "Change the printer error messages to something more entertaining. 'PC LOAD LETTER' becomes 'THE PRINTER GODS DEMAND SACRIFICE'.",
+      "status": "expired",
+      "difficulty": "hard",
+      "points": 300,
+      "createdBy": "Chris Taylor",
+      "assignedTo": "David Lin",
+      "participants": ["David Lin"],
+      "createdAt": "2025-11-20T10:00:00Z",
+      "expiresAt": "2025-11-30T17:00:00Z"
+    },
+    {
+      "id": 12,
+      "slug": "chair-height-adjustment",
+      "title": "The Chair Height Adjustment",
+      "description": "Slowly adjust someone's chair height down by 1cm each day until they notice. Document their confusion.",
+      "status": "assigned",
+      "difficulty": "medium",
+      "points": 150,
+      "createdBy": "Tony Ramirez",
+      "assignedTo": "Marcus Johnson",
+      "participants": ["Marcus Johnson"],
+      "createdAt": "2025-12-05T09:15:00Z",
+      "expiresAt": "2025-12-15T17:00:00Z"
+    },
+    {
+      "id": 13,
+      "slug": "keyboard-shortcut-training",
+      "title": "Secret Keyboard Shortcut Training",
+      "description": "Leave helpful keyboard shortcut cheat sheets on people's desks. Make them think the IT fairy visited overnight.",
+      "status": "active",
+      "difficulty": "easy",
+      "points": 70,
+      "createdBy": "Stephanie Brown",
+      "assignedTo": null,
+      "participants": [],
+      "createdAt": "2025-12-08T07:00:00Z",
+      "expiresAt": "2025-12-10T17:00:00Z"
+    },
+    {
+      "id": 14,
+      "slug": "office-scavenger-hunt",
+      "title": "Office Scavenger Hunt Setup",
+      "description": "Create and hide clues for an office-wide scavenger hunt. Final prize: the good parking spot for a week.",
+      "status": "active",
+      "difficulty": "hard",
+      "points": 275,
+      "createdBy": "Mike Peters",
+      "assignedTo": null,
+      "participants": [],
+      "createdAt": "2025-12-07T12:00:00Z",
+      "expiresAt": "2025-12-11T17:00:00Z"
+    },
+    {
+      "id": 15,
+      "slug": "ergonomic-intervention",
+      "title": "Ergonomic Intervention",
+      "description": "Notice anyone with bad posture? Leave anonymous ergonomic tips and a small plant on their desk with a note: 'Your spine will thank you'.",
+      "status": "expired",
+      "difficulty": "easy",
+      "points": 65,
+      "createdBy": "Alex Kim",
+      "assignedTo": "Jennifer Wu",
+      "participants": ["Jennifer Wu"],
+      "createdAt": "2025-11-29T10:30:00Z",
+      "expiresAt": "2025-12-06T17:00:00Z"
+    }
+  ]
+}
