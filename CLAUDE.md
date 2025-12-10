@@ -64,7 +64,7 @@ Use Tailwind utility classes exclusively. Define complex patterns in `globals.cs
 
 Do NOT apply tailwind classes directly in component templates unless essential or just 1 at most. If an element needs more than a single tailwind class, combine them into a custom class using the `@apply` directive.
 
-Use CSS modules for component-specific styles. Use the global CSS file for reusable global styles.
+**important:** Use CSS modules for component-specific styles (like UI components), and only use the global CSS file for reusable global styles & layout.
 
 ## Feature Development Workflow
 
