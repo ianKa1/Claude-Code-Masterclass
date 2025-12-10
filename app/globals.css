@@ -45,9 +45,10 @@ svg.logo {
 
 /* buttons */
 .btn {
-  @apply inline-block px-4 py-2 rounded-lg font-medium bg-primary text-white transition-colors;
+  @apply inline-flex items-center gap-2 px-4 py-2 rounded-[10px] font-normal text-white transition-opacity;
+  background: linear-gradient(to right, #9810fa, #e60076);
   &:hover {
-    @apply bg-secondary;
+    @apply opacity-90;
   }
 }
 

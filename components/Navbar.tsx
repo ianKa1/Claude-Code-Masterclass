@@ -1,5 +1,5 @@
-import { Clock8 } from "lucide-react"
-import Link from "next/link"
+import { Clock8, Plus } from "lucide-react";
+import Link from "next/link";
 
 export default function Navbar() {
   return (
@@ -8,17 +8,21 @@ export default function Navbar() {
         <header>
           <h1>
             <Link href="/heists">
-              P<Clock8 className="logo" size={14} strokeWidth={2.75} />cket Heist
+              P<Clock8 className="logo" size={14} strokeWidth={2.75} />
+              cket Heist
             </Link>
           </h1>
           <div>Tiny missions. Big office mischief.</div>
         </header>
         <ul>
           <li>
-            <Link href="/heists/create" className="btn">Create Heist</Link>
+            <Link href="/heists/create" className="btn">
+              <Plus size={20} />
+              Create New Heist
+            </Link>
           </li>
         </ul>
       </nav>
     </div>
-  )
+  );
 }
