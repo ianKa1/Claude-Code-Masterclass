@@ -1,9 +1,9 @@
-// this is a preview page for previewing new UI components before they're used in the app
+// preview page for newly created UI components
 
 export default function PreviewPage() {
   return (
     <div className="page-content">
-      <h2>Preview Components</h2>
+      <h2>Preview</h2>
     </div>
   )
 }
