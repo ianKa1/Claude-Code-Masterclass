@@ -62,3 +62,73 @@
 [debug] [2025-12-10T06:44:48.494Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
 [debug] [2025-12-10T06:44:48.495Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
 [debug] [2025-12-10T06:44:48.495Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-10T10:20:52.092Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-10T10:20:52.093Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-10T10:20:52.094Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-10T10:20:52.094Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-10T10:20:52.105Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-10T10:20:52.105Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-10T10:20:52.119Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-10T10:20:52.119Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-10T10:20:52.119Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-10T10:20:52.120Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-10T10:20:52.120Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-10T10:20:52.120Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-10T10:20:52.121Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-10T10:20:52.121Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-10T10:22:06.670Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-10T10:22:06.671Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-10T10:22:06.675Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-10T10:22:06.675Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-10T10:22:06.682Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-10T10:22:06.682Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-10T10:22:06.695Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-10T10:22:06.696Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-10T10:22:06.696Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-10T10:22:06.696Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-10T10:22:06.697Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-10T10:22:06.697Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-10T10:22:06.697Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-10T10:22:06.697Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-10T10:23:11.342Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-10T10:23:11.343Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-10T10:23:11.343Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-10T10:23:11.343Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-10T10:23:11.353Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-10T10:23:11.353Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-10T10:23:11.367Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-10T10:23:11.367Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-10T10:23:11.368Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-10T10:23:11.368Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-10T10:23:11.368Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-10T10:23:11.368Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-10T10:23:11.369Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-10T10:23:11.369Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-10T10:23:23.928Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-10T10:23:23.929Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-10T10:23:23.929Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-10T10:23:23.929Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-10T10:23:23.942Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-10T10:23:23.942Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-10T10:23:23.959Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-10T10:23:23.959Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-10T10:23:23.960Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-10T10:23:23.960Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-10T10:23:23.960Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-10T10:23:23.960Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-10T10:23:23.961Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-10T10:23:23.961Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-10T10:29:21.413Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-10T10:29:21.414Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-10T10:29:21.414Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-10T10:29:21.414Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-10T10:29:21.425Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-10T10:29:21.425Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-10T10:29:21.439Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-10T10:29:21.439Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-10T10:29:21.439Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-10T10:29:21.439Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-10T10:29:21.440Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-10T10:29:21.440Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-10T10:29:21.440Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-10T10:29:21.440Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
