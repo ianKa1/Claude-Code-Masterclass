@@ -2,6 +2,11 @@
 
 import { useState, FormEvent } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "@/lib/firebase";
+import { generateCodename } from "@/lib/codename";
+import { updateUserProfile, getAuthErrorMessage } from "@/lib/auth";
 import Input from "@/components/ui/Input";
 import PasswordInput from "@/components/ui/PasswordInput";
 import styles from "./AuthForm.module.css";
@@ -15,10 +20,12 @@ export default function AuthForm({ mode }: AuthFormProps) {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
+  const router = useRouter();
   const isLogin = mode === "login";
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError("");
 
@@ -27,7 +34,34 @@ export default function AuthForm({ mode }: AuthFormProps) {
       return;
     }
 
-    console.log("Form submitted:", { email, password });
+    if (isLogin) {
+      console.log("Form submitted:", { email, password });
+      return;
+    }
+
+    // SIGNUP FLOW
+    setIsLoading(true);
+
+    try {
+      // 1. Create user
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password,
+      );
+
+      // 2. Generate codename
+      const codename = generateCodename();
+
+      // 3. Update profile with retry
+      await updateUserProfile(userCredential.user, codename);
+
+      // 4. Navigate to /heists
+      router.push("/heists");
+    } catch (err) {
+      setError(getAuthErrorMessage(err));
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -64,8 +98,8 @@ export default function AuthForm({ mode }: AuthFormProps) {
 
       {error && <p className={styles.error}>{error}</p>}
 
-      <button type="submit" className="btn">
-        {isLogin ? "Log In" : "Sign Up"}
+      <button type="submit" className="btn" disabled={isLoading}>
+        {isLoading ? "Signing up..." : isLogin ? "Log In" : "Sign Up"}
       </button>
 
       <p className={styles.switchLink}>
