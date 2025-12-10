@@ -51,3 +51,6 @@ Create reusable UI components (Input, PasswordInput) in `components/ui/`, then a
 - Theme variables: `var(--color-lighter)`, `var(--color-primary)`, `var(--color-error)`, etc.
 - HTML5 validation with `:invalid:not(:placeholder-shown)` for error styling
 - `lucide-react` for Eye/EyeOff icons
+
+## Tests
+Implement tests in a test file according to the spec.
