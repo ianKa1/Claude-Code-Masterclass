@@ -43,6 +43,14 @@ svg.logo {
   display: inline-block;
 }
 
+/* buttons */
+.btn {
+  @apply inline-block px-4 py-2 rounded-lg font-medium bg-primary text-white transition-colors;
+  &:hover {
+    @apply bg-secondary;
+  }
+}
+
 /* generic page styles */
 .page-content {
   @apply my-4 mx-4 max-w-6xl lg:mx-auto;
