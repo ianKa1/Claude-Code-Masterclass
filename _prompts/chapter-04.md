@@ -15,3 +15,7 @@ I already have a Firebase project created with the id of pocket-heist-ninja, wit
 
 ## SPEC: firebase login functionality
 /spec can we spec the login form functionality - users should be logged in with the correct credentials, and then redirected to the /heists page when done. let's also conditionally show the user's displayName (codename) in the navbar to the left of the logout button.
+---
+
+## SPEC: Auth state management
+/spec let's spec an auth state management solution for the app, where we can access the current user (null if logged out, the user object if logged in) - maybe through a hook called useUser. We should be able to use that hook in any page or component. Then we can update any place in components which currently accesses the user. 
