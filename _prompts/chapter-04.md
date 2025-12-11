@@ -12,3 +12,5 @@ I already have a Firebase project created with the id of pocket-heist-ninja, wit
 
 ## SPEC: firebase logout functionality
 /spec can we spec the logout functionality, where a user clicks a button in the navbar (which only shows when logged in) to log out, and then get's redirected to the /login page.
+
+## SPEC: firebase login functionality
