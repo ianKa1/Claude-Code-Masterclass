@@ -14,4 +14,4 @@ I already have a Firebase project created with the id of pocket-heist-ninja, wit
 /spec can we spec the logout functionality, where a user clicks a button in the navbar (which only shows when logged in) to log out, and then get's redirected to the /login page. Figma: style the logout button as per the OutlineButton component in the navbar of the design.
 
 ## SPEC: firebase login functionality
-/spec can we spec the login form functionality - users should be logged in with the correct credentials, and then redirected to the /heists page when done.
+/spec can we spec the login form functionality - users should be logged in with the correct credentials, and then redirected to the /heists page when done. let's also conditionally show the user's displayName (codename) in the navbar to the left of the logout button.

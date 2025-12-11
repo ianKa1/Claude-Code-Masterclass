@@ -3,7 +3,10 @@
 import { useState, FormEvent } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 import { auth } from "@/lib/firebase";
 import { generateCodename } from "@/lib/codename";
 import { updateUserProfile, getAuthErrorMessage } from "@/lib/auth";
@@ -35,7 +38,19 @@ export default function AuthForm({ mode }: AuthFormProps) {
     }
 
     if (isLogin) {
-      console.log("Form submitted:", { email, password });
+      setIsLoading(true);
+
+      try {
+        // Sign in with Firebase
+        await signInWithEmailAndPassword(auth, email, password);
+
+        // Navigate to /heists
+        router.push("/heists");
+      } catch (err) {
+        setError(getAuthErrorMessage(err));
+        setIsLoading(false);
+      }
+
       return;
     }
 
@@ -99,7 +114,13 @@ export default function AuthForm({ mode }: AuthFormProps) {
       {error && <p className={styles.error}>{error}</p>}
 
       <button type="submit" className="btn" disabled={isLoading}>
-        {isLoading ? "Signing up..." : isLogin ? "Log In" : "Sign Up"}
+        {isLoading
+          ? isLogin
+            ? "Logging in..."
+            : "Signing up..."
+          : isLogin
+            ? "Log In"
+            : "Sign Up"}
       </button>
 
       <p className={styles.switchLink}>
