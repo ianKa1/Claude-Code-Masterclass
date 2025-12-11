@@ -32,6 +32,9 @@ h1, h2, h3, h4 {
   h1 {
     @apply font-bold text-xl;
   }
+  ul {
+    @apply flex items-center gap-3;
+  }
 }
 .public {
   @apply flex flex-col justify-center text-justify min-h-lvh;
@@ -49,6 +52,15 @@ svg.logo {
   background: linear-gradient(to right, #9810fa, #e60076);
   &:hover {
     @apply opacity-90;
+  }
+}
+.btn-muted {
+  @apply inline-flex items-center gap-2 px-4 py-2 rounded-[10px] font-normal text-body transition-all;
+  background: rgba(16, 24, 40, 0.4);
+  border: 2px solid rgba(153, 161, 175, 0.2);
+  &:hover {
+    @apply text-heading;
+    border-color: rgba(153, 161, 175, 0.4);
   }
 }
 
