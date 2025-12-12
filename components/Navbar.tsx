@@ -3,21 +3,13 @@
 import { Clock8, Plus, LogOut } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useState, useEffect } from "react";
 import { auth } from "@/lib/firebase";
-import { signOut, onAuthStateChanged } from "firebase/auth";
+import { signOut } from "firebase/auth";
+import { useUser } from "@/context/AuthContext";
 
 export default function Navbar() {
   const router = useRouter();
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setIsAuthenticated(!!user);
-    });
-
-    return () => unsubscribe();
-  }, []);
+  const { user } = useUser();
 
   const handleLogout = async () => {
     try {
@@ -41,7 +33,7 @@ export default function Navbar() {
           <div>Tiny missions. Big office mischief.</div>
         </header>
         <ul>
-          {isAuthenticated && (
+          {user && (
             <li>
               <button onClick={handleLogout} className="btn-muted">
                 <LogOut size={20} />

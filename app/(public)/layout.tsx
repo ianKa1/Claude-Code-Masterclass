@@ -1,23 +1,11 @@
-import type { Metadata } from "next"
-import "@/app/globals.css"
-
-export const metadata: Metadata = {
-  title: "Pocket Heist",
-  description: "Tiny missions. Big office mischief.",
-}
-
-export default function RootLayout({
+export default function PublicLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="public">
-        <main>
-          {children}
-        </main>
-      </body>
-    </html>
+    <div className="public">
+      <main>{children}</main>
+    </div>
   );
 }
