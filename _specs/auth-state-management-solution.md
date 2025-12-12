@@ -23,7 +23,6 @@ Create a centralized auth state management solution that provides a `useUser` ho
 ## Possible Edge Cases
 
 - Auth state initialization delay on first load (handle with loading state)
-- Firebase auth token expiration and refresh
 - Multiple components mounting/unmounting during auth state changes
 - User object updates after profile changes (e.g., displayName updates)
 - Network failures during auth state initialization
@@ -43,9 +42,9 @@ Create a centralized auth state management solution that provides a `useUser` ho
 
 ## Open Questions
 
-- Should the AuthProvider also expose helper functions like `logout` or `login`?
-- Should we add a `requireAuth` HOC or helper for protected routes?
-- Do we need to handle any Firestore user profile data alongside Firebase Auth user data?
+- Should the AuthProvider also expose helper functions like `logout` or `login`? No.
+- Should we add a `requireAuth` HOC or helper for protected routes? No. Not yet.
+- Do we need to handle any Firestore user profile data alongside Firebase Auth user data? No.
 
 ## Testing Guidelines
 
