@@ -34,12 +34,15 @@ export default function Navbar() {
         </header>
         <ul>
           {user && (
-            <li>
-              <button onClick={handleLogout} className="btn-muted">
-                <LogOut size={20} />
-                Log Out
-              </button>
-            </li>
+            <>
+              <li className="user-display-name">@{user.displayName}</li>
+              <li>
+                <button onClick={handleLogout} className="btn-muted">
+                  <LogOut size={20} />
+                  Log Out
+                </button>
+              </li>
+            </>
           )}
           <li>
             <Link href="/heists/create" className="btn">

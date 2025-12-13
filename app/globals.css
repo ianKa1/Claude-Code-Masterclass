@@ -45,6 +45,9 @@ h1, h2, h3, h4 {
 svg.logo {
   display: inline-block;
 }
+.user-display-name {
+  @apply text-primary;
+}
 
 /* buttons */
 .btn {
