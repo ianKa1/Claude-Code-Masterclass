@@ -1,5 +1,7 @@
 import { updateProfile } from "firebase/auth";
 import type { User } from "firebase/auth";
+import { doc, setDoc } from "firebase/firestore";
+import { db } from "@/lib/firebase";
 
 /**
  * Maps Firebase Auth error codes to user-friendly error messages.
@@ -70,4 +72,34 @@ export async function updateUserProfile(
   throw new Error(
     `Failed to update profile after ${maxRetries} attempts: ${lastError instanceof Error ? lastError.message : "Unknown error"}`,
   );
+}
+
+/**
+ * Creates a user document in Firestore with the user's codename.
+ * @param userId - The Firebase Auth user UID
+ * @param codename - The user's generated codename
+ * @throws Error if the document creation fails
+ */
+export async function createUserDocument(
+  userId: string,
+  codename: string,
+): Promise<void> {
+  try {
+    console.log(
+      "Creating user document for:",
+      userId,
+      "with codename:",
+      codename,
+    );
+    const userDocRef = doc(db, "users", userId);
+    await setDoc(userDocRef, {
+      codename,
+    });
+    console.log("Successfully created user document");
+  } catch (error) {
+    console.error("Error creating user document:", error);
+    throw new Error(
+      `Failed to create user document: ${error instanceof Error ? error.message : "Unknown error"}`,
+    );
+  }
 }

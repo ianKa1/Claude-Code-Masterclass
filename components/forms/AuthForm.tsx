@@ -9,7 +9,11 @@ import {
 } from "firebase/auth";
 import { auth } from "@/lib/firebase";
 import { generateCodename } from "@/lib/codename";
-import { updateUserProfile, getAuthErrorMessage } from "@/lib/auth";
+import {
+  updateUserProfile,
+  getAuthErrorMessage,
+  createUserDocument,
+} from "@/lib/auth";
 import Input from "@/components/ui/Input";
 import PasswordInput from "@/components/ui/PasswordInput";
 import styles from "./AuthForm.module.css";
@@ -71,7 +75,10 @@ export default function AuthForm({ mode }: AuthFormProps) {
       // 3. Update profile with retry
       await updateUserProfile(userCredential.user, codename);
 
-      // 4. Navigate to /heists
+      // 4. Create user document in Firestore
+      await createUserDocument(userCredential.user.uid, codename);
+
+      // 5. Navigate to /heists
       router.push("/heists");
     } catch (err) {
       setError(getAuthErrorMessage(err));
@@ -126,7 +133,7 @@ export default function AuthForm({ mode }: AuthFormProps) {
       <p className={styles.switchLink}>
         {isLogin ? (
           <>
-            Don&apos;t have an account? <Link href="/signup">Sign up</Link>
+            Don't have an account? <Link href="/signup">Sign up</Link>
           </>
         ) : (
           <>
