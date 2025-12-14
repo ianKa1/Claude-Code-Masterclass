@@ -14,6 +14,7 @@ Create a custom React hook called `useHeists` that provides real-time access to 
 - Automatically clean up Firestore listener on component unmount
 - Support optional filtering parameters (e.g., by status, assignee)
 - Use the existing Firestore converter for type-safe data transformation
+- output the titles of the heists (for each hook argument) in the preview page in simple lists.
 
 ## Possible Edge Cases
 - User not authenticated (should handle gracefully)
@@ -33,10 +34,10 @@ Create a custom React hook called `useHeists` that provides real-time access to 
 - Error state captures and exposes Firestore errors
 
 ## Open Questions
-- Should the hook support pagination for large heist collections?
-- Should we implement any caching strategy to reduce Firestore reads?
-- Do we need different hooks for different heist views (active, assigned, expired)?
-- Should the hook accept a user ID to filter heists by assignment?
+- Should the hook support pagination for large heist collections? No.
+- Should we implement any caching strategy to reduce Firestore reads? No.
+- Do we need different hooks for different heist views (active, assigned, expired)? No, we can use a single hook and pass in 3 different criteria as arguments: 'active' (all active assigned TO current user), 'assigned' (all active assigned BY the current user), and 'expired' (ALL expired heists, regardless of user - they all show to everyone here).
+- Should the hook accept a user ID to filter heists by assignment? Depending on the argument (active, assigned, expired), the hook should automatically construct queries to filter for the current user. The only argument which shouldn't trigger the filter is the 'expired' one - this fetches them all.
 
 ## Testing Guidelines
 Create a test file(s) in the ./tests folder for the new feature, and create meaningful tests for the following cases, without going too heavy:

@@ -8,7 +8,7 @@ from when it was created), isActive (bool), finalStatus (either success or failu
 ---
 
 ## Fetch heists hook
-spec is running… let's make a hook for accessing heists data from the firestore collection, called useHeists, which can later be used in the /heists page. It should access real-time data and return an array of heist objects.
+spec is running… let's make a hook for accessing heists data from the firestore collection, called useHeists, which can later be used in the /heists page. It should access real-time data and return an array of heist objects. The hook should accept an argument, which is either: 'active' (all active heists assigned TO the current user), 'assigned' (all active heists assigned BY the current user) or 'expired' (all expired heists, regardless of the user). The hook should use the value of this argument to filter the results of queries appropriately. Once created, let's use the hook to show only the titles of the 3 different result sets on the preview page.
 ---
 
 ## Spash page using design-skill
