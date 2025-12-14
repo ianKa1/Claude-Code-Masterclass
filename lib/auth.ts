@@ -56,6 +56,7 @@ export async function updateUserProfile(
   for (let attempt = 0; attempt < maxRetries; attempt++) {
     try {
       await updateProfile(user, { displayName });
+      await user.reload(); // Force Firebase to refresh the user object
       return; // Success
     } catch (error) {
       lastError = error;

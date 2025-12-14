@@ -9,6 +9,7 @@ type AuthContextType = {
   user: User | null;
   loading: boolean;
   error: Error | null;
+  refreshUser: () => Promise<void>;
 };
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -17,6 +18,14 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
+
+  const refreshUser = async () => {
+    const currentUser = auth.currentUser;
+    if (currentUser) {
+      await currentUser.reload();
+      setUser({ ...currentUser });
+    }
+  };
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(
@@ -37,7 +46,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user, loading, error }}>
+    <AuthContext.Provider value={{ user, loading, error, refreshUser }}>
       {children}
     </AuthContext.Provider>
   );

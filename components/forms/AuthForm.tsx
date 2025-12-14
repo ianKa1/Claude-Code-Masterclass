@@ -14,6 +14,7 @@ import {
   getAuthErrorMessage,
   createUserDocument,
 } from "@/lib/auth";
+import { useUser } from "@/context/AuthContext";
 import Input from "@/components/ui/Input";
 import PasswordInput from "@/components/ui/PasswordInput";
 import styles from "./AuthForm.module.css";
@@ -30,6 +31,7 @@ export default function AuthForm({ mode }: AuthFormProps) {
   const [isLoading, setIsLoading] = useState(false);
 
   const router = useRouter();
+  const { refreshUser } = useUser();
   const isLogin = mode === "login";
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -75,10 +77,13 @@ export default function AuthForm({ mode }: AuthFormProps) {
       // 3. Update profile with retry
       await updateUserProfile(userCredential.user, codename);
 
-      // 4. Create user document in Firestore
+      // 4. Refresh the auth context to get updated user with displayName
+      await refreshUser();
+
+      // 5. Create user document in Firestore
       await createUserDocument(userCredential.user.uid, codename);
 
-      // 5. Navigate to /heists
+      // 6. Navigate to /heists
       router.push("/heists");
     } catch (err) {
       setError(getAuthErrorMessage(err));
