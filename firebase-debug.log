@@ -424,3 +424,116 @@
 [debug] [2025-12-15T06:50:48.938Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
 [debug] [2025-12-15T06:50:48.939Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebaseapphosting.googleapis.com 200
 [debug] [2025-12-15T06:50:48.939Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebaseapphosting.googleapis.com [omitted]
+[debug] [2025-12-15T14:55:33.427Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-15T14:55:33.429Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-15T14:55:33.429Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-15T14:55:33.429Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-15T14:55:33.435Z] Checked if tokens are valid: false, expires at: 1765785026000
+[debug] [2025-12-15T14:55:33.435Z] Checked if tokens are valid: false, expires at: 1765785026000
+[debug] [2025-12-15T14:55:33.435Z] > refreshing access token with scopes: []
+[debug] [2025-12-15T14:55:33.437Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-12-15T14:55:33.437Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-12-15T14:55:33.457Z] Checked if tokens are valid: false, expires at: 1765785026000
+[debug] [2025-12-15T14:55:33.457Z] Checked if tokens are valid: false, expires at: 1765785026000
+[debug] [2025-12-15T14:55:33.457Z] > refreshing access token with scopes: []
+[debug] [2025-12-15T14:55:33.457Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-12-15T14:55:33.457Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-12-15T14:55:33.458Z] Checked if tokens are valid: false, expires at: 1765785026000
+[debug] [2025-12-15T14:55:33.458Z] Checked if tokens are valid: false, expires at: 1765785026000
+[debug] [2025-12-15T14:55:33.458Z] > refreshing access token with scopes: []
+[debug] [2025-12-15T14:55:33.458Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-12-15T14:55:33.458Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-12-15T14:55:33.460Z] Checked if tokens are valid: false, expires at: 1765785026000
+[debug] [2025-12-15T14:55:33.460Z] Checked if tokens are valid: false, expires at: 1765785026000
+[debug] [2025-12-15T14:55:33.460Z] > refreshing access token with scopes: []
+[debug] [2025-12-15T14:55:33.460Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-12-15T14:55:33.460Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-12-15T14:55:33.462Z] Checked if tokens are valid: false, expires at: 1765785026000
+[debug] [2025-12-15T14:55:33.462Z] Checked if tokens are valid: false, expires at: 1765785026000
+[debug] [2025-12-15T14:55:33.462Z] > refreshing access token with scopes: []
+[debug] [2025-12-15T14:55:33.463Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-12-15T14:55:33.463Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-12-15T14:55:33.464Z] Checked if tokens are valid: false, expires at: 1765785026000
+[debug] [2025-12-15T14:55:33.464Z] Checked if tokens are valid: false, expires at: 1765785026000
+[debug] [2025-12-15T14:55:33.464Z] > refreshing access token with scopes: []
+[debug] [2025-12-15T14:55:33.464Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-12-15T14:55:33.464Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-12-15T14:55:33.467Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-15T14:55:33.467Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-15T14:55:33.467Z] Checked if tokens are valid: false, expires at: 1765785026000
+[debug] [2025-12-15T14:55:33.467Z] Checked if tokens are valid: false, expires at: 1765785026000
+[debug] [2025-12-15T14:55:33.467Z] > refreshing access token with scopes: []
+[debug] [2025-12-15T14:55:33.467Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-12-15T14:55:33.468Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-12-15T14:55:33.472Z] Checked if tokens are valid: false, expires at: 1765785026000
+[debug] [2025-12-15T14:55:33.472Z] Checked if tokens are valid: false, expires at: 1765785026000
+[debug] [2025-12-15T14:55:33.472Z] > refreshing access token with scopes: []
+[debug] [2025-12-15T14:55:33.472Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-12-15T14:55:33.472Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-12-15T14:55:33.473Z] Checked if tokens are valid: false, expires at: 1765785026000
+[debug] [2025-12-15T14:55:33.473Z] Checked if tokens are valid: false, expires at: 1765785026000
+[debug] [2025-12-15T14:55:33.473Z] > refreshing access token with scopes: []
+[debug] [2025-12-15T14:55:33.473Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-12-15T14:55:33.473Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-12-15T14:55:33.562Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-12-15T14:55:33.562Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-12-15T14:55:33.579Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebasedataconnect.googleapis.com [none]
+[debug] [2025-12-15T14:55:33.579Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/pocket-heist-app
+[debug] [2025-12-15T14:55:33.589Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-12-15T14:55:33.590Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-12-15T14:55:33.602Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebaseapphosting.googleapis.com [none]
+[debug] [2025-12-15T14:55:33.602Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebaseapphosting.googleapis.com x-goog-quota-user=projects/pocket-heist-app
+[debug] [2025-12-15T14:55:33.604Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-12-15T14:55:33.604Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-12-15T14:55:33.616Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebaseio.com [none]
+[debug] [2025-12-15T14:55:33.616Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebaseio.com x-goog-quota-user=projects/pocket-heist-app
+[debug] [2025-12-15T14:55:33.617Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-12-15T14:55:33.617Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-12-15T14:55:33.625Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebaseapphosting.googleapis.com [none]
+[debug] [2025-12-15T14:55:33.625Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebaseapphosting.googleapis.com x-goog-quota-user=projects/pocket-heist-app
+[debug] [2025-12-15T14:55:33.626Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-12-15T14:55:33.626Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-12-15T14:55:33.634Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebaseapphosting.googleapis.com [none]
+[debug] [2025-12-15T14:55:33.634Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebaseapphosting.googleapis.com x-goog-quota-user=projects/pocket-heist-app
+[debug] [2025-12-15T14:55:33.636Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-12-15T14:55:33.636Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-12-15T14:55:33.645Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebasedataconnect.googleapis.com [none]
+[debug] [2025-12-15T14:55:33.645Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/pocket-heist-app
+[debug] [2025-12-15T14:55:33.646Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-12-15T14:55:33.646Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-12-15T14:55:33.657Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebaseio.com [none]
+[debug] [2025-12-15T14:55:33.657Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebaseio.com x-goog-quota-user=projects/pocket-heist-app
+[debug] [2025-12-15T14:55:33.658Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-12-15T14:55:33.658Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-12-15T14:55:33.667Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebasedataconnect.googleapis.com [none]
+[debug] [2025-12-15T14:55:33.667Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebasedataconnect.googleapis.com x-goog-quota-user=projects/pocket-heist-app
+[debug] [2025-12-15T14:55:33.671Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-12-15T14:55:33.671Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-12-15T14:55:33.682Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebaseio.com [none]
+[debug] [2025-12-15T14:55:33.683Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebaseio.com x-goog-quota-user=projects/pocket-heist-app
+[debug] [2025-12-15T14:55:34.297Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebaseio.com 403
+[debug] [2025-12-15T14:55:34.297Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebaseio.com [omitted]
+[debug] [2025-12-15T14:55:34.389Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebaseapphosting.googleapis.com 200
+[debug] [2025-12-15T14:55:34.389Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebaseapphosting.googleapis.com [omitted]
+[debug] [2025-12-15T14:55:34.392Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebasedataconnect.googleapis.com 200
+[debug] [2025-12-15T14:55:34.393Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2025-12-15T14:55:34.657Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebasedataconnect.googleapis.com 200
+[debug] [2025-12-15T14:55:34.657Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2025-12-15T14:55:34.883Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebaseio.com 403
+[debug] [2025-12-15T14:55:34.884Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebaseio.com [omitted]
+[debug] [2025-12-15T14:55:34.884Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebaseio.com 403
+[debug] [2025-12-15T14:55:34.884Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebaseio.com [omitted]
+[debug] [2025-12-15T14:55:35.066Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebaseapphosting.googleapis.com 200
+[debug] [2025-12-15T14:55:35.066Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebaseapphosting.googleapis.com [omitted]
+[debug] [2025-12-15T14:55:35.067Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-15T14:55:35.067Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-15T14:55:35.067Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-15T14:55:35.068Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-15T14:55:35.068Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebasedataconnect.googleapis.com 200
+[debug] [2025-12-15T14:55:35.068Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebasedataconnect.googleapis.com [omitted]
+[debug] [2025-12-15T14:55:35.068Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-15T14:55:35.068Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-15T14:55:35.069Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-15T14:55:35.069Z] > authorizing via signed-in user (shaun@thenetninja.co.uk)
+[debug] [2025-12-15T14:55:35.070Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebaseapphosting.googleapis.com 200
+[debug] [2025-12-15T14:55:35.070Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/pocket-heist-app/services/firebaseapphosting.googleapis.com [omitted]
