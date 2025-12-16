@@ -3,6 +3,8 @@
 import { useHeists } from "@/hooks/useHeists";
 import HeistCard from "@/components/ui/HeistCard";
 import SkeletonCard from "@/components/ui/SkeletonCard";
+import ExpiredHeistCard from "@/components/ui/ExpiredHeistCard";
+import ExpiredHeistCardSkeleton from "@/components/ui/ExpiredHeistCardSkeleton";
 import styles from "./page.module.css";
 
 export default function HeistsPage() {
@@ -16,6 +18,11 @@ export default function HeistsPage() {
     loading: assignedLoading,
     error: assignedError,
   } = useHeists("assigned");
+  const {
+    heists: expiredHeists,
+    loading: expiredLoading,
+    error: expiredError,
+  } = useHeists("expired");
 
   return (
     <div className="page-content">
@@ -51,7 +58,7 @@ export default function HeistsPage() {
 
       {/* Section 2: Assigned Heists */}
       <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>Heists You've Assigned</h2>
+        <h2 className={styles.sectionTitle}>Heists You&apos;ve Assigned</h2>
 
         {assignedLoading && (
           <div className={styles.cardGrid}>
@@ -67,13 +74,45 @@ export default function HeistsPage() {
         )}
 
         {!assignedLoading && !assignedError && assignedHeists.length === 0 && (
-          <p className={styles.empty}>You haven't assigned any heists yet.</p>
+          <p className={styles.empty}>
+            You haven&apos;t assigned any heists yet.
+          </p>
         )}
 
         {!assignedLoading && !assignedError && assignedHeists.length > 0 && (
           <div className={styles.cardGrid}>
             {assignedHeists.map((heist) => (
               <HeistCard key={heist.id} heist={heist} />
+            ))}
+          </div>
+        )}
+      </section>
+
+      {/* Section 3: Expired Heists */}
+      <section className={styles.section}>
+        <h2 className={styles.sectionTitle}>Expired Heists</h2>
+
+        {expiredLoading && (
+          <div className={styles.expiredCardList}>
+            <ExpiredHeistCardSkeleton />
+            <ExpiredHeistCardSkeleton />
+          </div>
+        )}
+
+        {!expiredLoading && expiredError && (
+          <p className={styles.error}>
+            Failed to load expired heists. Please try again.
+          </p>
+        )}
+
+        {!expiredLoading && !expiredError && expiredHeists.length === 0 && (
+          <p className={styles.empty}>No expired heists yet.</p>
+        )}
+
+        {!expiredLoading && !expiredError && expiredHeists.length > 0 && (
+          <div className={styles.expiredCardList}>
+            {expiredHeists.map((heist) => (
+              <ExpiredHeistCard key={heist.id} heist={heist} />
             ))}
           </div>
         )}

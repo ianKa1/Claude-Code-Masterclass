@@ -1,36 +1,7 @@
 import { Heist } from "@/types/firestore/heist";
 import { Clock8, User, UserPlus } from "lucide-react";
+import { formatDeadline } from "@/lib/date-utils";
 import styles from "./HeistCard.module.css";
-
-function formatDeadline(date: Date): string {
-  const now = new Date();
-  const diff = date.getTime() - now.getTime();
-  const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
-
-  // Format options
-  const dateOptions: Intl.DateTimeFormatOptions = {
-    month: "short",
-    day: "numeric",
-    hour: "numeric",
-    minute: "2-digit",
-    hour12: true,
-  };
-
-  const formattedDate = date.toLocaleString("en-US", dateOptions);
-
-  // Add relative time context
-  if (days === 0) {
-    return `Today, ${formattedDate}`;
-  } else if (days === 1) {
-    return `Tomorrow, ${formattedDate}`;
-  } else if (days > 0 && days <= 7) {
-    return `${days}d left - ${formattedDate}`;
-  } else if (days < 0) {
-    return `Overdue - ${formattedDate}`;
-  }
-
-  return formattedDate;
-}
 
 interface HeistCardProps {
   heist: Heist;

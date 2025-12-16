@@ -1,0 +1,57 @@
+.card {
+  width: 100%;
+  max-width: 771px;
+  min-height: 86px;
+  padding: 17px 17px 1px 17px;
+  background: rgba(16, 24, 40, 0.3);
+  border: 1px solid rgba(30, 41, 57, 0.3);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.titleSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.statusSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.metadata {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    min-height: auto;
+    padding: 17px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .metadata {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
