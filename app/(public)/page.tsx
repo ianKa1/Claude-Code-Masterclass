@@ -12,5 +12,5 @@ export default function Home() {
       </h1>
       <div>Tiny missions. Big office mischief.</div>
     </div>
-  );
+  )
 }

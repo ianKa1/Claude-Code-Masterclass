@@ -34,10 +34,12 @@ h1, h2, h3, h4 {
   }
 }
 .public {
-  @apply flex flex-col justify-center text-justify min-h-lvh;
   h1 {
     @apply text-4xl;
   }
+}
+.form {
+  @apply flex flex-col justify-center text-justify min-h-lvh;
 }
 svg.logo {
   display: inline-block;
