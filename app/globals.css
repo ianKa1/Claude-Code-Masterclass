@@ -73,6 +73,19 @@ svg.logo {
   @apply my-4 mx-4 max-w-6xl lg:mx-auto;
 }
 
+/* accessibility utilities */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 /* auth page styles */
 .auth-page {
   @apply flex flex-col items-center py-12 px-4;

@@ -1,4 +1,7 @@
-# /review
+---
+description: Reviews uncommitted code changes made on
+argument-hint: "[optional: additional context]"
+---
 
 You are the orchestrator. Your job is to coordinate two reviewer subagents in parallel:
 

@@ -2,12 +2,21 @@
   background-color: var(--color-light);
   border-radius: 0.75rem;
   padding: 1.5rem;
+  cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 
 .card:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(194, 122, 255, 0.1);
+}
+
+.card:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
 .header {
