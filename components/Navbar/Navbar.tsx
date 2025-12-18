@@ -1,14 +1,16 @@
-import { Clock8 } from "lucide-react"
-import Link from "next/link"
+import { Clock8 } from "lucide-react";
+import Link from "next/link";
+import styles from "./Navbar.module.css";
 
 export default function Navbar() {
   return (
-    <div className="site-nav">
+    <div className={styles.siteNav}>
       <nav>
         <header>
           <h1>
             <Link href="/heists">
-              P<Clock8 className="logo" size={14} strokeWidth={2.75} />cket Heist
+              P<Clock8 className={styles.logo} size={14} strokeWidth={2.75} />
+              cket Heist
             </Link>
           </h1>
           <div>Tiny missions. Big office mischief.</div>
@@ -20,5 +22,5 @@ export default function Navbar() {
         </ul>
       </nav>
     </div>
-  )
+  );
 }

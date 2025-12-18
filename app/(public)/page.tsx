@@ -6,11 +6,13 @@ import { Clock8 } from "lucide-react"
 
 export default function Home() {
   return (
-    <div className="page-content text-center">
-      <h1>
-        P<Clock8 className="logo" strokeWidth={2.75} />cket Heist
-      </h1>
-      <div>Tiny missions. Big office mischief.</div>
+    <div className="center-content">
+      <div className="page-content">
+        <h1>
+          P<Clock8 className="logo" strokeWidth={2.75} />cket Heist
+        </h1>
+        <div>Tiny missions. Big office mischief.</div>
+      </div>
     </div>
   )
 }

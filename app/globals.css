@@ -24,21 +24,12 @@ h1, h2, h3, h4 {
 }
 
 /* generic layout styles */
-.site-nav {
-  @apply bg-light px-2 py-4;
-  nav {
-    @apply mx-auto max-w-6xl flex justify-between items-center;
-  }
-  h1 {
-    @apply font-bold text-xl;
-  }
-}
 .public {
   h1 {
     @apply text-4xl;
   }
 }
-.form {
+.center-content {
   @apply flex flex-col justify-center text-justify min-h-lvh;
 }
 svg.logo {
