@@ -38,5 +38,5 @@ svg.logo {
 
 /* generic page styles */
 .page-content {
-  @apply my-4 mx-4 max-w-6xl lg:mx-auto;
+  @apply my-4 mx-4 max-w-6xl;
 }
