@@ -1,16 +1,16 @@
 ---
-description: Reviews uncommitted code changes made on
-argument-hint: "[optional: additional context]"
+description: Reviews uncommitted code changes made on the current branch.
+allowed-tools: Bash(git diff), Bash(git diff --staged)
 ---
 
-You are the orchestrator. Your job is to coordinate two reviewer subagents in parallel:
+Your job is to coordinate two reviewer subagents in parallel:
 
-- accessibility-reviewer
-- code-quality-reviewer
+- **a11y-reviewer**
+- **code-quality-reviewer**
 
 Goal:
 1. Gather the current branch diff including BOTH staged and unstaged changes.
-2. Run both reviewers in parallel on the same diff.
+2. Run both reviewer subagents in parallel on the same diff.
 3. Combine their feedback into one unified report, de-duplicating overlap.
 4. Produce a proposed edit plan (ordered checklist) to address the feedback.
 5. Ask the user for explicit approval BEFORE making any code changes.
@@ -26,6 +26,7 @@ Process:
     - the combined diff output
     - brief repo context if needed (tech stack, lint/test commands if available)
   - Tell them to be evidence-based: file paths, line/snippet references, no guessing.
+  - Tell them NOT to review any code outside the diff.
 
 - Merge results into:
   1. Summary (max 8 bullets total)
@@ -37,7 +38,6 @@ Process:
 Rules:
 - Do NOT edit any files yet.
 - Do NOT run formatting-only changes unless they fix a cited issue.
-- Be explicit about what is verified from code vs what needs verification in the running app.
 
 Finish by asking:
 "Do you want me to implement the action plan now?"
