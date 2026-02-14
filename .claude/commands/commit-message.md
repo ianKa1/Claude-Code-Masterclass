@@ -39,25 +39,10 @@ git status
 
 # Current git diff (staged changes)
 git diff --staged
-
-# Recent commits for context
-git log --oneline -5
-
-# Current branch
-git branch --show-current
 ```
 
 ### 2. Extract Jira Ticket Context (if applicable)
 
-Parse the current branch name to find Jira ticket IDs using these patterns:
-- `PROJ-123-feature-name`
-- `feature/PROJ-123-description`
-- `PROJ-123`
-
-If a Jira ticket ID is found:
-- Use `mcp__zapier__jira_software_cloud_find_issue_by_key` to fetch ticket details
-- Get title, description, acceptance criteria, comments
-- Use this context to understand the broader purpose of the changes
 
 ### 3. Human-in-the-Loop - Ask for Context
 
@@ -133,16 +118,8 @@ After receiving the user's approval of the commit message:
 git commit -m "$(cat <<'EOF'
 type(scope): subject line
 
-Why this change was needed:
-[explanation]
-
-What changed:
 [technical summary]
 
-Problem solved:
-[problem description]
-
-Refs: PROJ-123
 EOF
 )"
 ```
@@ -161,73 +138,11 @@ Create commit messages that future developers will appreciate when doing code ar
 - **What problem** does it solve? (from Jira ticket and user input)
 - **How** does it relate to the larger feature/project? (Jira context)
 
-## Examples
-
-### Example 1: Feature with Jira Context
-
-```
-feat(mcp): add tool execution timeout handling
-
-Why this change was needed:
-Tools were hanging indefinitely when external APIs failed to respond,
-blocking the entire MCP server. This was causing user-facing timeouts
-in the chat interface.
-
-What changed:
-- Added configurable timeout wrapper around tool execution
-- Implemented graceful timeout error messages
-- Updated tool registry to support per-tool timeout configuration
-
-Problem solved:
-External API failures no longer block the MCP server. Users now receive
-clear timeout errors instead of indefinite hanging.
-
-Refs: AGP-582
-```
-
-### Example 2: Bug Fix
-
-```
-fix(auth): prevent token refresh race condition
-
-Why this change was needed:
-Multiple simultaneous requests were triggering concurrent token refresh
-attempts, causing some requests to fail with stale tokens.
-
-What changed:
-- Added mutex lock around token refresh logic
-- Implemented token refresh deduplication
-- Added retry logic for failed requests during refresh
-
-Problem solved:
-Concurrent requests no longer cause authentication failures due to
-token refresh race conditions.
-```
-
-### Example 3: Refactoring
-
-```
-refactor(api): extract validation logic to shared module
-
-Why this change was needed:
-Input validation was duplicated across 7 different API endpoints,
-making it difficult to maintain consistent validation rules.
-
-What changed:
-- Created shared validation utilities in packages/validation
-- Updated all API endpoints to use shared validators
-- Removed 200+ lines of duplicated validation code
-
-Problem solved:
-Validation logic is now centralized and consistent across all endpoints.
-Future validation changes only need to be made in one place.
-```
-
 ## Important Notes
 
+- **Make it compact** - Never exceed 20 words
 - **Never skip the "why" question** - User context is crucial
 - **Use heredoc for multi-line commits** - Ensures proper formatting
-- **Reference Jira tickets** when found in branch name
 - **Be specific** in technical summaries
 - **Think about the reader** - someone debugging this code in 6 months
 - **No co-authors** - Never add "Co-Authored-By" or mention Claude Code
