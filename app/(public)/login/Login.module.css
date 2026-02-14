@@ -1,0 +1,49 @@
+@reference "../../globals.css";
+
+.form {
+  @apply flex flex-col gap-4 w-full max-w-sm mx-auto mt-6;
+}
+
+.inputGroup {
+  @apply flex flex-col gap-1;
+}
+
+.label {
+  @apply text-body text-sm;
+}
+
+.input {
+  @apply w-full px-3 py-2 rounded-lg bg-light text-heading
+         border border-lighter focus:outline-none focus:border-primary;
+}
+
+.errorText {
+  @apply text-error text-sm;
+}
+
+.forgotLink {
+  @apply text-primary text-sm hover:underline self-start;
+}
+
+.submitBtn {
+  @apply w-full inline-block px-4 py-2 rounded-lg font-semibold transition-colors;
+  color: var(--color-heading);
+  background-color: var(--color-primary);
+}
+
+.submitBtn:hover {
+  background-color: var(--color-secondary);
+}
+
+.spinner {
+  @apply inline-block w-4 h-4 border-2 border-heading border-t-transparent
+         rounded-full animate-spin;
+}
+
+.switchLink {
+  @apply text-center text-body text-sm;
+}
+
+.switchLink a {
+  @apply text-primary hover:underline;
+}
