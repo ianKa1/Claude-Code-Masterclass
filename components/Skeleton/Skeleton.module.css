@@ -1,0 +1,39 @@
+@reference "../../app/globals.css";
+
+.card {
+  @apply rounded-xl p-6;
+  background-color: var(--color-light);
+}
+
+.header {
+  @apply flex items-center gap-4 mb-6;
+}
+
+.avatar {
+  @apply w-16 h-16 rounded-full shrink-0;
+  background-color: var(--color-lighter);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.headerLines {
+  @apply flex flex-col gap-3 flex-1;
+}
+
+.line {
+  @apply h-3 rounded-full;
+  background-color: var(--color-lighter);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.body {
+  @apply flex flex-col gap-4;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

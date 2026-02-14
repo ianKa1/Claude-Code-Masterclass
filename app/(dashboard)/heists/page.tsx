@@ -1,6 +1,12 @@
 export default function HeistsPage() {
   return (
     <div className="page-content">
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold">Mission Control</h1>
+        <p className="mt-2 text-body">
+          Welcome back, agent. Below you'll find your active operations, assigned missions, and the archives of past exploits. Choose wisely — every heist counts.
+        </p>
+      </div>
       <div className="active-heists">
         <h2>Your Active Heists</h2>
       </div>
