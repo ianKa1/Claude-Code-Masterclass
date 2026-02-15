@@ -4,17 +4,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Pocket Heist — a Next.js 16 web app for managing office heist missions. Starter project for the Claude Code Masterclass. Currently a frontend-only application with placeholder pages ready for feature implementation.
+Pocket Heist — a Next.js 16 web app for managing office heist missions. Starter project for the Claude Code Masterclass. Frontend-only application; no real auth or backend is implemented yet.
 
 ## Commands
 
 - `npm run dev` — Start dev server at localhost:3000
-- `npm run build` — Production build
-- `npm run start` — Serve production build
+- `npm run build` — Production build (Turbopack)
 - `npm run lint` — ESLint (next/core-web-vitals + next/typescript, flat config)
-- `npm run test` — Run all tests with Vitest (watch mode)
-- `npx vitest run` — Run tests once (no watch)
+- `npx vitest run` — Run all tests once
 - `npx vitest run tests/components/Navbar.test.tsx` — Run a single test file
+- `npm run test` — Vitest in watch mode
 
 ## Architecture
 
@@ -25,69 +24,113 @@ Pocket Heist — a Next.js 16 web app for managing office heist missions. Starte
 - `app/(public)/` — Unauthenticated pages (home, login, signup, preview). Layout wraps children in `<main className="public">`.
 - `app/(dashboard)/` — Authenticated pages. Layout renders `<Navbar />` above `<main>{children}</main>`.
 
-Dashboard routes:
-- `/heists` — Mission list with three sections: active, assigned, expired
-- `/heists/create` — Heist creation form (placeholder)
-- `/heists/[id]` — Individual heist detail page (placeholder)
+Dashboard routes: `/heists`, `/heists/create`, `/heists/[id]`.
 
-The home page (`app/(public)/page.tsx`) is intended to route logged-in users to `/heists` and unauthenticated users to `/login`. No auth logic is implemented yet.
+The home page is intended to redirect logged-in users to `/heists` and guests to `/login` — auth logic not yet implemented.
 
 ### Components
 
-Components live in `components/<Name>/` with:
-- `<Name>.tsx` — Component implementation
-- `<Name>.module.css` — Scoped styles using CSS Modules
-- `index.ts` — Barrel re-export (`export { default } from "./<Name>"`)
+Components live in `components/<Name>/` with three files each:
+- `<Name>.tsx` — implementation
+- `<Name>.module.css` — scoped styles
+- `index.ts` — barrel re-export (`export { default } from "./<Name>"`)
 
-Currently only `Navbar` exists. It uses `next/link` for navigation and `lucide-react` for icons.
+Existing components: `Navbar`, `PasswordInput`, `SocialAuthButtons`, `Skeleton`.
 
 ### Testing
 
-Tests live in `tests/` mirroring the source structure (e.g., `tests/components/Navbar.test.tsx`).
+Tests mirror source structure under `tests/` (e.g. `tests/components/`, `tests/pages/`).
 
-- **Framework**: Vitest with jsdom environment
-- **Libraries**: React Testing Library + jest-dom matchers (via `vitest.setup.ts`)
-- **Globals**: `describe`, `it`, `expect` are globally available (no imports needed, though existing tests do import them from vitest)
-- **Pattern**: Render with `render()`, query with `screen.getByRole()`, assert with jest-dom matchers like `toBeInTheDocument()`
-
-### What Doesn't Exist Yet
-
-No API routes, middleware, custom hooks, context providers, utility modules, env files, CI/CD config, or type definition directories. These are all opportunities for future implementation.
+- **Stack**: Vitest + jsdom + React Testing Library + jest-dom
+- `vitest.setup.ts` imports jest-dom and provides a global `localStorage` mock (jsdom 27 does not expose a working localStorage by default)
+- `describe`/`it`/`expect`/`vi` are available as globals — import from `vitest` only when needed (e.g. `vi.spyOn`)
+- Query pattern: `screen.getByRole()` / `screen.getByLabelText()`, assert with jest-dom matchers
 
 ## Styling
 
-**Tailwind CSS 4** with PostCSS. Custom theme tokens in `app/globals.css` via `@theme`:
+**Tailwind CSS 4** + PostCSS. Theme tokens defined in `app/globals.css` via `@theme`:
 
-| Token | Value | Usage |
-|-------|-------|-------|
-| `primary` | `#C27AFF` (purple) | Accent color |
-| `secondary` | `#FB64B6` (pink) | Secondary accent |
+| Token | Value | Purpose |
+|-------|-------|---------|
+| `primary` | `#C27AFF` | Accent / buttons |
+| `secondary` | `#FB64B6` | Hover state |
 | `dark` | `#030712` | Page background |
 | `light` | `#0A101D` | Component backgrounds |
 | `lighter` | `#101828` | Elevated surfaces |
 | `success` | `#05DF72` | Success states |
-| `error` | `#FF6467` | Error states |
+| `error` | `#FF6467` | Error / validation |
 | `heading` | `white` | Heading text |
 | `body` | `#99A1AF` | Body text |
 
-Font: Inter (Google Fonts import).
+**Global utility classes** in `globals.css`:
+- `.page-content` — centered container
+- `.center-content` — full-height centered flex column
+- `.form-title` — centered bold title for form pages
+- `.btn` — primary button (purple fill, pink hover)
 
-**Global utility classes** defined in `globals.css`:
-- `.page-content` — Centered container (`mx-auto w-6xl min-w-2xl max-w-full`)
-- `.center-content` — Full-height centered flex column
-- `.form-title` — Centered bold title for form pages
+**CSS Modules critical rules:**
+- Use `@reference` at the top to access theme tokens: the path must match where the file lives.
+  - Files in `components/<Name>/` → `@reference "../../app/globals.css"`
+  - Files in `app/(public)/<page>/` → `@reference "../../globals.css"` (already inside `app/`)
+- `@apply` only works with Tailwind utilities — **not** custom classes like `.btn`. Inline `.btn` styles manually when needed in a module.
+- `localStorage` in page components must guard against SSR: use `typeof window !== "undefined"` in lazy `useState` initializers; avoid `setState` inside `useEffect` (ESLint rule `react-hooks/set-state-in-effect`).
 
-**CSS Modules** use `@reference "../../app/globals.css"` to access theme tokens and apply Tailwind utilities via `@apply`.
+## Development Workflow
+
+Features are developed in three stages. Always complete each stage before moving to the next.
+
+### Stage 1 — Spec (`/spec`)
+
+Run `/spec <short feature description>` to kick off a new feature. This slash command will:
+1. Check there are no uncommitted changes (aborts if dirty)
+2. Create a new branch `claude/feature/<slug>`
+3. Generate a markdown spec in `_specs/<slug>.md` using the template at `_specs/template.md`
+
+The spec covers: summary, functional requirements, edge cases, acceptance criteria, open questions, and testing guidelines. Review and fill in open questions before proceeding.
+
+Specs live in `_specs/`. Never add technical implementation details (code snippets) to a spec — those belong in the plan.
+
+### Stage 2 — Plan (`_plans/`)
+
+After the spec is approved, create a detailed implementation plan in `_plans/<slug>.md`. A good plan includes:
+- Files to create / modify (table)
+- Build order (to avoid import errors)
+- Full component/page structure with props, state, JSX shape, and event handler logic
+- CSS module classes per file
+- Exact test cases with code snippets
+- Edge cases and gotchas
+- Accessibility checklist
+- Verification steps
+
+Plans are not generated by a slash command — write them manually or with Claude in plan mode (`/plan`), then save to `_plans/`.
+
+### Stage 3 — Implementation
+
+Implement the plan file top-to-bottom following the build order. After implementation:
+- Run `npx vitest run` to confirm all tests pass
+- Run `npm run build` to confirm no build errors
+- Run `npm run lint` to confirm no lint errors
+
+### Slash Commands
+
+| Command | Purpose |
+|---------|---------|
+| `/spec <idea>` | Create spec file + feature branch from a one-line description |
+| `/component <description>` | TDD workflow: write tests → create component → iterate until green → add to preview page |
+| `/commit-message` | Analyse staged changes, ask why, generate a Conventional Commits message, commit and push |
 
 ## Code Style
 
-- **Do not use semicolons in JavaScript/TypeScript files**
-- **Double quotes** for strings and imports
-- **Trailing commas** in multiline structures
-- Component props typed as `Readonly<{ children: React.ReactNode }>` with `import type` for type-only imports
-- **Default exports** for page and component files
-- **Conventional commits**: `feat:`, `fix:`, `style:`, `refactor:`, `docs:`
+- **No semicolons** in JS/TS files (Prettier hook auto-formats on save — default config adds them; ignore if formatter runs)
+- **Double quotes**, **trailing commas** in multiline structures
+- Props typed as `Readonly<{...}>`, `import type` for type-only imports
+- **Default exports** for pages and components
+- **Conventional commits**: `feat:`, `fix:`, `style:`, `refactor:`, `docs:`, `chore:`, `test:`
+
+## Checking Documentation
+
+- **important:** When implementing any lib/framework-specific features, ALWAYS check the appropriate lib/framework documentation using the context7 MCP server before writing any codes.
 
 ## Path Aliases
 
-`@/*` maps to the project root — configured in `tsconfig.json` and resolved in tests via `vite-tsconfig-paths`.
+`@/*` maps to the project root — configured in `tsconfig.json`, resolved in tests via `vite-tsconfig-paths`.

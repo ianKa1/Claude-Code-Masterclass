@@ -42,3 +42,6 @@ next-env.d.ts
 
 # hook artifacts
 tool-use.json
+
+# firebase
+firebase-debug.log
