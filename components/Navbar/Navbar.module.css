@@ -15,3 +15,7 @@
 svg.logo {
   display: inline-block;
 }
+
+.logoutBtn {
+  @apply text-body text-sm hover:text-primary transition-colors bg-transparent border-none cursor-pointer;
+}
