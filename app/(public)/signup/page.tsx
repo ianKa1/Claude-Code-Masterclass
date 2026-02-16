@@ -1,14 +1,17 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import PasswordInput from "@/components/PasswordInput";
 import SocialAuthButtons from "@/components/SocialAuthButtons";
+import { signUpUser } from "@/lib/firebase/signup";
 import styles from "./Signup.module.css";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export default function SignupPage() {
+  const router = useRouter();
   const [email, setEmail] = useState(() =>
     typeof window !== "undefined"
       ? (localStorage.getItem("auth_email") ?? "")
@@ -22,6 +25,7 @@ export default function SignupPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
+  const [firebaseError, setFirebaseError] = useState("");
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
@@ -41,7 +45,7 @@ export default function SignupPage() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     let valid = true;
@@ -55,9 +59,25 @@ export default function SignupPage() {
     }
     if (!valid) return;
 
+    setFirebaseError("");
     setIsLoading(true);
-    console.log({ email, password });
-    setIsLoading(false);
+    try {
+      await signUpUser(email, password);
+      setPassword("");
+      localStorage.removeItem("auth_password");
+      router.push("/heists");
+    } catch (err) {
+      const code = (err as { code?: string }).code;
+      if (code === "auth/email-already-in-use") {
+        setFirebaseError("Email is already registered");
+      } else if (code === "auth/weak-password") {
+        setPasswordError("Password must be at least 6 characters");
+      } else {
+        setFirebaseError("Something went wrong. Please try again.");
+      }
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -101,6 +121,8 @@ export default function SignupPage() {
           >
             {isLoading ? <span className={styles.spinner} /> : "Sign Up"}
           </button>
+
+          {firebaseError && <p className={styles.errorText}>{firebaseError}</p>}
 
           <SocialAuthButtons />
 
