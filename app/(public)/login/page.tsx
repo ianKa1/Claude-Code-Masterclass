@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import PasswordInput from "@/components/PasswordInput";
 import SocialAuthButtons from "@/components/SocialAuthButtons";
+import { loginUser } from "@/lib/firebase/login";
 import styles from "./Login.module.css";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -22,6 +23,8 @@ export default function LoginPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
+  const [firebaseError, setFirebaseError] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
@@ -41,7 +44,7 @@ export default function LoginPage() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     let valid = true;
@@ -55,9 +58,28 @@ export default function LoginPage() {
     }
     if (!valid) return;
 
+    setFirebaseError("");
+    setSuccessMessage("");
     setIsLoading(true);
-    console.log({ email, password });
-    setIsLoading(false);
+    try {
+      const displayName = await loginUser(email, password);
+      setSuccessMessage(`Welcome back, ${displayName ?? "Agent"}!`);
+      setPassword("");
+      localStorage.removeItem("auth_password");
+    } catch (err) {
+      const code = (err as { code?: string }).code;
+      if (code === "auth/invalid-credential") {
+        setFirebaseError("Invalid email or password");
+      } else if (code === "auth/user-disabled") {
+        setFirebaseError("This account has been disabled");
+      } else if (code === "auth/too-many-requests") {
+        setFirebaseError("Too many attempts. Please try again later");
+      } else {
+        setFirebaseError("Something went wrong. Please try again.");
+      }
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -104,6 +126,11 @@ export default function LoginPage() {
           >
             {isLoading ? <span className={styles.spinner} /> : "Log In"}
           </button>
+
+          {firebaseError && <p className={styles.errorText}>{firebaseError}</p>}
+          {successMessage && (
+            <p className={styles.successText}>{successMessage}</p>
+          )}
 
           <SocialAuthButtons />
 

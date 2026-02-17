@@ -21,6 +21,10 @@
   @apply text-error text-sm;
 }
 
+.successText {
+  @apply text-success text-sm text-center;
+}
+
 .forgotLink {
   @apply text-primary text-sm hover:underline self-start;
 }
