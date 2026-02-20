@@ -1,0 +1,59 @@
+@reference "../../../globals.css";
+
+.form {
+  @apply flex flex-col gap-4 max-w-sm mx-auto;
+}
+
+.inputGroup {
+  @apply flex flex-col gap-1;
+}
+
+.label {
+  @apply text-body text-sm;
+}
+
+.input {
+  @apply bg-lighter text-heading px-4 py-3 rounded-lg border border-lighter;
+  @apply focus:outline-none focus:border-primary transition-colors;
+}
+
+.textarea {
+  @apply bg-lighter text-heading px-4 py-3 rounded-lg border border-lighter;
+  @apply focus:outline-none focus:border-primary transition-colors;
+  @apply resize-none;
+  min-height: 100px;
+}
+
+.select {
+  @apply bg-lighter text-heading px-4 py-3 rounded-lg border border-lighter;
+  @apply focus:outline-none focus:border-primary transition-colors;
+  @apply cursor-pointer;
+}
+
+.errorText {
+  @apply text-error text-sm;
+}
+
+.warningText {
+  @apply text-body text-sm text-center italic;
+}
+
+.buttonGroup {
+  @apply flex gap-3;
+}
+
+.submitBtn {
+  @apply flex-1 bg-primary text-white font-semibold py-3 px-6 rounded-lg;
+  @apply hover:bg-secondary transition-colors;
+  @apply disabled:opacity-50 disabled:cursor-not-allowed;
+  @apply flex items-center justify-center gap-2;
+}
+
+.cancelBtn {
+  @apply flex-1 bg-transparent text-heading font-semibold py-3 px-6 rounded-lg;
+  @apply border border-lighter hover:bg-light transition-colors;
+}
+
+.spinner {
+  @apply inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin;
+}
